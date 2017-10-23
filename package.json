@@ -1,22 +1,127 @@
 {
-  "name": "cuppajoe",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
-  },
-  "devDependencies": {
-    "@types/jest": "^21.1.4",
-    "@types/node": "^8.0.45",
-    "@types/react": "^16.0.14",
-    "@types/react-dom": "^16.0.1",
-    "react-scripts-ts": "2.8.0"
-  },
-  "scripts": {
-    "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
-    "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject"
-  }
+	"name": "cuppajoe",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"autoprefixer": "7.1.2",
+		"babel-core": "^6.26.0",
+		"babel-preset-react-app": "^3.0.3",
+		"babel-runtime": "^6.26.0",
+		"caniuse-lite": "^1.0.30000748",
+		"case-sensitive-paths-webpack-plugin": "2.1.1",
+		"chai": "^4.1.2",
+		"chalk": "1.1.3",
+		"css-loader": "0.28.4",
+		"cssnano": "^3.10.0",
+		"dotenv": "4.0.0",
+		"enzyme-adapter-react-16": "^1.0.2",
+		"enzyme-to-json": "^3.1.4",
+		"extract-text-webpack-plugin": "3.0.0",
+		"file-loader": "0.11.2",
+		"fs-extra": "3.0.1",
+		"html-webpack-plugin": "2.29.0",
+		"jsdom": "^11.3.0",
+		"jsdom-global": "^3.0.2",
+		"lodash": "^4.17.4",
+		"object-assign": "4.1.1",
+		"postcss-assets": "^5.0.0",
+		"postcss-cssnext": "^3.0.2",
+		"postcss-flexbugs-fixes": "3.2.0",
+		"postcss-loader": "2.0.6",
+		"postcss-reporter": "^5.0.0",
+		"promise": "8.0.1",
+		"react": "^16.0.0",
+		"react-dev-utils": "^4.0.1",
+		"react-dom": "^16.0.0",
+		"react-test-renderer": "^16.0.0",
+		"sinon": "^4.0.1",
+		"sinon-chai": "^2.14.0",
+		"source-map-loader": "^0.2.1",
+		"style-loader": "0.18.2",
+		"sw-precache-webpack-plugin": "0.11.4",
+		"ts-jest": "^20.0.7",
+		"ts-loader": "^2.3.7",
+		"tslint": "^5.7.0",
+		"tslint-loader": "^3.5.3",
+		"tslint-react": "^3.2.0",
+		"typescript": "~2.5.3",
+		"url-loader": "0.5.9",
+		"webpack": "3.5.1",
+		"webpack-dev-server": "2.7.1",
+		"webpack-manifest-plugin": "1.2.1",
+		"whatwg-fetch": "2.0.3"
+	},
+	"devDependencies": {
+		"@types/enzyme": "^3.1.0",
+		"@types/enzyme-adapter-react-16": "^1.0.0",
+		"@types/jest": "^21.1.4",
+		"@types/node": "^8.0.45",
+		"@types/react": "^16.0.14",
+		"@types/react-dom": "^16.0.1",
+		"babel-eslint": "^8.0.1",
+		"babel-jest": "^21.2.0",
+		"enzyme": "^3.1.0",
+		"eslint": "^4.9.0",
+		"eslint-config-react-app": "^2.0.1",
+		"eslint-plugin-flowtype": "^2.39.1",
+		"eslint-plugin-import": "^2.7.0",
+		"eslint-plugin-jsx-a11y": "^5.1.1",
+		"eslint-plugin-react": "^7.4.0",
+		"jest": "21.3.0-beta.2",
+		"jest-enzyme": "^4.0.1"
+	},
+	"scripts": {
+		"start": "node scripts/start.js",
+		"build": "node scripts/build.js",
+		"test": "node scripts/test.js --env=jsdom "
+	},
+	"jest": {
+		"mapCoverage": true,
+		"collectCoverageFrom": ["src/**/*.{js,jsx,ts,tsx}"],
+		"setupFiles": [
+			"<rootDir>/config/polyfills.js",
+			"<rootDir>/config/setup.js"
+		],
+		"snapshotSerializers": ["enzyme-to-json/serializer"],
+		"testMatch": [
+			"<rootDir>/src/**/__tests__/**/*.ts?(x)",
+			"<rootDir>/src/**/?(*.)(spec|test).ts?(x)"
+		],
+		"testEnvironment": "node",
+		"testURL": "http://localhost",
+		"transform": {
+			"^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+			"^.+\\.tsx?$": "<rootDir>/config/jest/typescriptTransform.js",
+			"^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+		},
+		"transformIgnorePatterns": [
+			"[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$"
+		],
+		"moduleNameMapper": {
+			"^react-native$": "react-native-web"
+		},
+		"moduleFileExtensions": [
+			"web.ts",
+			"ts",
+			"web.tsx",
+			"tsx",
+			"web.js",
+			"js",
+			"web.jsx",
+			"jsx",
+			"json",
+			"node"
+		],
+		"globals": {
+			"ts-jest": {
+				"tsConfigFile": "/Users/Seean/Dropbox/Code/cuppajoe/tsconfig.test.json"
+			}
+		}
+	},
+	"babel": {
+		"presets": ["react-app"]
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	}
 }
