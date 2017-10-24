@@ -5,6 +5,7 @@
 	"dependencies": {
 		"autoprefixer": "7.1.2",
 		"babel-core": "^6.26.0",
+		"babel-loader": "^7.1.2",
 		"babel-preset-react-app": "^3.0.3",
 		"babel-runtime": "^6.26.0",
 		"caniuse-lite": "^1.0.30000748",
@@ -118,9 +119,7 @@
 			}
 		}
 	},
-	"babel": {
-		"presets": ["react-app"]
-	},
+
 	"eslintConfig": {
 		"extends": "react-app"
 	}
