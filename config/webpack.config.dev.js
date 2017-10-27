@@ -190,6 +190,11 @@ module.exports = {
 											],
 											flexbox: 'no-2009'
 										}),
+										// Adds all: initial
+										require('postcss-initial')({
+											reset: 'inherited'
+										}),
+										require('postcss-autoreset'),
 										// Automatically calculates true
 										// URL for assets through resolve() fn
 										require('postcss-assets')({
