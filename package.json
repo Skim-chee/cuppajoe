@@ -55,8 +55,10 @@
 		"tslint-loader": "^3.5.3",
 		"tslint-react": "^3.2.0",
 		"typescript": "~2.5.3",
+		"typestyle": "^1.4.5",
 		"url-loader": "0.5.9",
 		"webpack": "3.5.1",
+		"webpack-dashboard": "^1.0.0",
 		"webpack-dev-server": "2.7.1",
 		"webpack-manifest-plugin": "1.2.1",
 		"whatwg-fetch": "2.0.3"
@@ -81,22 +83,18 @@
 		"jest-enzyme": "^4.0.1"
 	},
 	"scripts": {
-		"start": "node scripts/start.js",
+		"start": "webpack-dashboard node scripts/start.js",
 		"build": "node scripts/build.js",
 		"test": "node scripts/test.js --env=jsdom "
 	},
 	"jest": {
 		"mapCoverage": true,
-		"collectCoverageFrom": [
-			"src/**/*.{js,jsx,ts,tsx}"
-		],
+		"collectCoverageFrom": ["src/**/*.{js,jsx,ts,tsx}"],
 		"setupFiles": [
 			"<rootDir>/config/polyfills.js",
 			"<rootDir>/config/setup.js"
 		],
-		"snapshotSerializers": [
-			"enzyme-to-json/serializer"
-		],
+		"snapshotSerializers": ["enzyme-to-json/serializer"],
 		"testMatch": [
 			"<rootDir>/src/**/__tests__/**/*.ts?(x)",
 			"<rootDir>/src/**/?(*.)(spec|test).ts?(x)"

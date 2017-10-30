@@ -12,7 +12,12 @@ var express = require('express'),
 	axios = require('axios'),
 	assert = require('assert'),
 	mongoose = require('mongoose'),
-	path = require('path');
+	path = require('path'),
+	graphql = require('graphql').graphql,
+	graphQLHTTP = require('express-graphql'),
+	schema = require('./graphql/schema'),
+	user = require('./mongoose/user'),
+	cafe = require('./mongoose/cafe');
 
 const app = express();
 app.use(forceSsl);
@@ -45,7 +50,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 // Creates default http server on port 4000
 http.createServer(app).listen(port, () => {
-	console.log('Listening on port ' + port);
+	console.log('HTTP server is running on port ' + port);
 });
 
 // Sets mongoose to use native ES6 promises instead of mpromise
