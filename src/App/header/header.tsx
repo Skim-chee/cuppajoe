@@ -1,22 +1,17 @@
 import React from 'react';
-import { style } from 'typestyle';
+import styles from './styles';
 const logo = require('../../Assets/Logo@2x.png');
-
-const container = style({
-	display: 'flex',
-	flexDirection: 'column',
-	width: '100%'
-});
-const logoWeb = style({
-	alignSelf: 'center',
-	height: '148px'
-});
+// import logo from '../../Assets/Logo@2x.png';
 
 const Header = () => {
 	return (
-		<div className={container}>
-			<img className={logoWeb} src={logo} />
-		</div>
+		<header>
+			<div className={styles.container}>
+				<a href="/">
+					<img className={styles.logoWeb} src={logo} alt="logo" />
+				</a>
+			</div>
+		</header>
 	);
 };
 
