@@ -3,6 +3,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
+		"@types/recompose": "^0.24.2",
 		"autoprefixer": "7.1.2",
 		"axios": "^0.17.0",
 		"babel-core": "^6.26.0",
@@ -44,6 +45,7 @@
 		"react-dev-utils": "^4.0.1",
 		"react-dom": "^16.0.0",
 		"react-test-renderer": "^16.0.0",
+		"recompose": "^0.26.0",
 		"sinon": "^4.0.1",
 		"sinon-chai": "^2.14.0",
 		"source-map-loader": "^0.2.1",
@@ -89,12 +91,16 @@
 	},
 	"jest": {
 		"mapCoverage": true,
-		"collectCoverageFrom": ["src/**/*.{js,jsx,ts,tsx}"],
+		"collectCoverageFrom": [
+			"src/**/*.{js,jsx,ts,tsx}"
+		],
 		"setupFiles": [
 			"<rootDir>/config/polyfills.js",
 			"<rootDir>/config/setup.js"
 		],
-		"snapshotSerializers": ["enzyme-to-json/serializer"],
+		"snapshotSerializers": [
+			"enzyme-to-json/serializer"
+		],
 		"testMatch": [
 			"<rootDir>/src/**/__tests__/**/*.ts?(x)",
 			"<rootDir>/src/**/?(*.)(spec|test).ts?(x)"

@@ -1,8 +1,9 @@
 import React from 'react';
+import { pure } from 'recompose';
 import styles from './styles';
 const logo = require('../../Assets/Logo@2x.png');
 
-const Header = () => {
+const Header: React.ComponentType = pure(() => {
 	return (
 		<header>
 			<div className={styles.container}>
@@ -12,6 +13,6 @@ const Header = () => {
 			</div>
 		</header>
 	);
-};
+});
 
 export default Header;
