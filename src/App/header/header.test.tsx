@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import Header from './header';
 import toJson from 'enzyme-to-json';
 
@@ -19,6 +19,6 @@ describe('Header', () => {
 	});
 
 	it('verifies no props', () => {
-		expect(wrapper.props()).toEqual({});
+		expect(wrapper.instance().props).toEqual({});
 	});
 });

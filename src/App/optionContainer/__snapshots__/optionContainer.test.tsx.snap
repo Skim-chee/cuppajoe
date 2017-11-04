@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header matches the snapshot 1`] = `
+<div>
+  <div>
+    <OptionButton
+      feeling="chill"
+      option={1}
+    />
+    <OptionButton
+      feeling="productive"
+      option={1}
+    />
+  </div>
+  <div>
+    <OptionButton
+      feeling="stay"
+      option={1}
+    />
+    <OptionButton
+      feeling="go"
+      option={1}
+    />
+  </div>
+</div>
+`;
