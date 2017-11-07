@@ -1,13 +1,13 @@
 import React from 'react';
 import Header from './header/header';
-import OptionContainer from './optionContainer/optionContainer';
+import Body from './body/body';
 
 class App extends React.Component {
 	render() {
 		return (
 			<div>
 				<Header />
-				<OptionContainer />
+				<Body />
 			</div>
 		);
 	}
