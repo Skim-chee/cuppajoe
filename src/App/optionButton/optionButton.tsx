@@ -1,57 +1,42 @@
+// import { cssRule } from 'typestyle/lib';
 import React from 'react';
-import { style } from 'typestyle';
-const chill = require('../../Assets/Options/Chill@2x.png');
-const go = require('../../Assets/Options/Go@2x.png');
-const productive = require('../../Assets/Options/Productive@2x.png');
-const stay = require('../../Assets/Options/Stay@2x.png');
+// import { style } from 'typestyle';
+import OptionRadio from './optionRadio/optionRadio';
 
 export interface Props {
 	feeling: string;
 	option: number;
+	activeOption: number;
 }
 
-const OptionButton: React.SFC<Props> = props => {
-	const { feeling, option } = props;
-	let feelingImage;
-	switch (props.feeling) {
-		case 'chill':
-			feelingImage = chill;
-			break;
-		case 'productive':
-			feelingImage = productive;
-			break;
-		case 'stay':
-			feelingImage = stay;
-			break;
-		case 'go':
-			feelingImage = go;
-			break;
-		default:
-			break;
+interface State {
+	feeling: string;
+	option: number;
+	activeOption: number;
+}
+
+class OptionButton extends React.Component<Props, State> {
+	constructor(props: Props) {
+		super(props);
+		this.state = {
+			feeling: props.feeling,
+			option: props.option,
+			activeOption: props.activeOption
+		};
 	}
 
-	const buttonStyle = style({
-		backgroundImage: `url(${feelingImage})`
-	});
-
-	const btnImage = style({
-		cursor: 'pointer',
-		backgroundSize: 'contain',
-		backgroundRepeat: 'no-repeat',
-		display: 'inline-block',
-		width: '108px',
-		height: '108px',
-		transition: 'all 250ms ease-in',
-		filter: 'brightness(1.5) grayscale(1) opacity(.5)'
-	});
-
-	return (
-		<div>
-			<input type="radio" value={feeling} />
-			<label className={[btnImage, buttonStyle].join(' ')} />
-			{option}
-		</div>
-	);
-};
+	render() {
+		return (
+			<div>
+				<OptionRadio
+					feeling={this.state.feeling}
+					option={this.state.option}
+					activeOption={this.state.activeOption}
+				/>
+				<p>HI</p>
+			</div>
+		);
+	}
+}
 
 export default OptionButton;

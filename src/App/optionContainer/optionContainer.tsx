@@ -17,12 +17,16 @@ class OptionContainer extends React.Component<{}, State> {
 		return (
 			<div>
 				<div>
-					<OptionButton feeling="chill" option={optionOne} />
-					<OptionButton feeling="productive" option={optionOne} />
+					<OptionButton feeling="chill" option={1} activeOption={optionOne} />
+					<OptionButton
+						feeling="productive"
+						option={2}
+						activeOption={optionOne}
+					/>
 				</div>
 				<div>
-					<OptionButton feeling="stay" option={optionTwo} />
-					<OptionButton feeling="go" option={optionTwo} />
+					<OptionButton feeling="stay" option={1} activeOption={optionTwo} />
+					<OptionButton feeling="go" option={2} activeOption={optionTwo} />
 				</div>
 			</div>
 		);

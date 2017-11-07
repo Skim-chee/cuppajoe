@@ -2,8 +2,17 @@
 
 exports[`Header matches the snapshot 1`] = `
 <div>
-  chill
-   AND 
+  <input
+    className="f1wt0yvj"
+    name="1"
+    type="radio"
+    value="chill"
+  />
+  <label
+    className="f1uscnny fa7andv"
+  />
+  1
+   
   1
 </div>
 `;

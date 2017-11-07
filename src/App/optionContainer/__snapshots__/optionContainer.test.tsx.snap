@@ -4,22 +4,26 @@ exports[`Header matches the snapshot 1`] = `
 <div>
   <div>
     <OptionButton
+      activeOption={1}
       feeling="chill"
       option={1}
     />
     <OptionButton
+      activeOption={1}
       feeling="productive"
-      option={1}
+      option={2}
     />
   </div>
   <div>
     <OptionButton
+      activeOption={1}
       feeling="stay"
       option={1}
     />
     <OptionButton
+      activeOption={1}
       feeling="go"
-      option={1}
+      option={2}
     />
   </div>
 </div>
