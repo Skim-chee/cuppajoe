@@ -6,8 +6,8 @@ import toJson from 'enzyme-to-json';
 describe('Header', () => {
 	const Props = {
 		feeling: 'chill',
-		option: 1,
-		activeOption: 1
+		activeOption: 1,
+		onOptionChange: () => 2
 	};
 	const wrapper = shallow(<OptionButton {...Props} />);
 

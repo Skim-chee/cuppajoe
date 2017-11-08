@@ -9,11 +9,11 @@ interface Props {
 	feeling: string;
 	option: number;
 	activeOption: number;
+	onOptionChange: (option: number) => void;
 }
 
 const OptionRadio: React.SFC<Props> = props => {
-	const { feeling, option, activeOption } = props;
-
+	const { feeling, option, activeOption, onOptionChange } = props;
 	let feelingImage;
 	switch (feeling) {
 		case 'chill':
@@ -68,7 +68,6 @@ const OptionRadio: React.SFC<Props> = props => {
 				type="radio"
 				name="1"
 				id={feeling}
-				value={feeling}
 				checked={true}
 			/>
 			<label
@@ -78,9 +77,8 @@ const OptionRadio: React.SFC<Props> = props => {
 					option === activeOption && btnChecked
 				)}
 				htmlFor={feeling}
+				onClick={() => onOptionChange(option)}
 			/>
-			{option}
-			{activeOption}
 		</div>
 	);
 };

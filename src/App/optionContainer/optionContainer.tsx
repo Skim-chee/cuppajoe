@@ -7,26 +7,53 @@ interface State {
 }
 
 class OptionContainer extends React.Component<{}, State> {
-	public state: State = {
-		optionOne: 1,
-		optionTwo: 1
-	};
+	constructor() {
+		super();
+
+		this.state = {
+			optionOne: 1,
+			optionTwo: 1
+		};
+
+		this.optionOneSelect = this.optionOneSelect.bind(this);
+		this.optionTwoSelect = this.optionTwoSelect.bind(this);
+	}
+
+	optionOneSelect(optionOne: number) {
+		this.setState({ optionOne });
+	}
+
+	optionTwoSelect(optionTwo: number) {
+		this.setState({ optionTwo });
+	}
 
 	render() {
 		const { optionOne, optionTwo } = this.state;
 		return (
 			<div>
 				<div>
-					<OptionButton feeling="chill" option={1} activeOption={optionOne} />
+					<OptionButton
+						feeling="chill"
+						activeOption={optionOne}
+						onOptionChange={this.optionOneSelect}
+					/>
 					<OptionButton
 						feeling="productive"
-						option={2}
 						activeOption={optionOne}
+						onOptionChange={this.optionOneSelect}
 					/>
 				</div>
 				<div>
-					<OptionButton feeling="stay" option={1} activeOption={optionTwo} />
-					<OptionButton feeling="go" option={2} activeOption={optionTwo} />
+					<OptionButton
+						feeling="stay"
+						activeOption={optionTwo}
+						onOptionChange={this.optionTwoSelect}
+					/>
+					<OptionButton
+						feeling="go"
+						activeOption={optionTwo}
+						onOptionChange={this.optionTwoSelect}
+					/>
 				</div>
 			</div>
 		);
