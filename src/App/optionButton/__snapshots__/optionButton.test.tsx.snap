@@ -2,17 +2,16 @@
 
 exports[`Header matches the snapshot 1`] = `
 <div>
-  <input
-    className="f1wt0yvj"
-    name="1"
-    type="radio"
-    value="chill"
+  <OptionRadio
+    activeOption={1}
+    feeling="chill"
+    onOptionChange={[Function]}
+    option={1}
   />
-  <label
-    className="f1uscnny fa7andv"
+  <OptionText
+    activeOption={1}
+    feeling="chill"
+    option={1}
   />
-  1
-   
-  1
 </div>
 `;

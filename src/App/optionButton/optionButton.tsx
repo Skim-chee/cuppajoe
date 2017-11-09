@@ -1,7 +1,8 @@
 // import { cssRule } from 'typestyle/lib';
 import React from 'react';
 // import { style } from 'typestyle';
-import OptionRadio from './optionRadio/optionRadio';
+import OptionRadio from './optionButtonComponents/optionRadio';
+import OptionText from './optionButtonComponents/optionText';
 
 export interface Props {
 	feeling: string;
@@ -25,12 +26,6 @@ const OptionButton: React.SFC<Props> = props => {
 			break;
 	}
 
-	// this.state = {
-	// 	feeling: props.feeling,
-	// 	option: option,
-	// 	activeOption: props.activeOption
-	// };
-
 	return (
 		<div>
 			<OptionRadio
@@ -38,6 +33,11 @@ const OptionButton: React.SFC<Props> = props => {
 				option={option}
 				activeOption={props.activeOption}
 				onOptionChange={props.onOptionChange}
+			/>
+			<OptionText
+				feeling={props.feeling}
+				option={option}
+				activeOption={props.activeOption}
 			/>
 		</div>
 	);

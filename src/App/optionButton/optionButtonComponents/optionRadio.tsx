@@ -64,7 +64,7 @@ const OptionRadio: React.SFC<Props> = props => {
 	return (
 		<div>
 			<input
-				className={classes(btnInput)}
+				className={btnInput}
 				type="radio"
 				name="1"
 				id={feeling}
