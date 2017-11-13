@@ -1,5 +1,6 @@
 import React from 'react';
 import OptionButton from '../optionButton/optionButton';
+import SubmitButton from '../submitButton/submitButton';
 
 interface State {
 	optionOne: number;
@@ -55,6 +56,7 @@ class OptionContainer extends React.Component<{}, State> {
 						onOptionChange={this.optionTwoSelect}
 					/>
 				</div>
+				<SubmitButton primary={true} />
 			</div>
 		);
 	}
